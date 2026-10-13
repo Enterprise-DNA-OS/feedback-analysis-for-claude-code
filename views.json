@@ -1,13 +1,20 @@
 [
   {
-    "name": "week",
-    "title": "This week",
-    "subtitle": "Feedback Analysis for Claude Code: what needs attention, rendered by npm run view",
+    "name": "weekly-feedback",
+    "title": "Weekly feedback review",
+    "subtitle": "Fictional demo until your own data is imported. Accepted coding only.",
     "sections": [
       {
-        "title": "Needs attention",
-        "note": "TODO(author): point this at the industry's attention view (overdue, stuck, quiet).",
-        "sql": "select 'replace me' as item, 'TODO(author)' as why"
+        "title": "Theme evidence",
+        "sql": "select * from v_theme_volume order by dataset,mentions desc,theme"
+      },
+      {
+        "title": "Action commitments",
+        "sql": "select reference,dataset,theme,title,owner,due_on,days_left from v_actions_due order by days_left"
+      },
+      {
+        "title": "Analyst review queue",
+        "sql": "select reference,dataset,segment,received_on,proposed,accepted,privacy_reviewed from v_review_queue order by received_on"
       }
     ]
   }

@@ -1,24 +1,9 @@
 # Why there is no front end
 
-Thematic is a database with a subscription. The tables underneath it are ordinary: a few entities, a few relationships, a handful of workflows you repeat every week. What you pay for is the layer on top that lets people who do not write SQL get at those tables. Screens, filters, dashboards, forms.
+An analyst imports feedback, checks themes, compares segments and prepares an evidence brief. These jobs need records and repeatable calculations. The database holds them. Claude Code, Codex, OpenCode or Cursor is the operator's door.
 
-That layer used to be the whole product, because talking to a database was hard. It is not hard any more. Open this folder in Claude Code, describe what you want, and it writes the query, runs it, and explains the answer. Ask a question the dashboard never had a chart for and you still get an answer.
+The base works locally without an external service. It does not capture surveys, record calls, transcribe audio or train a classification model. The operator or coding agent proposes themes, then an analyst accepts or rejects the evidence. Thematic already has automated analysis and natural-language questions; owning the records and changing your workflow is the reason to choose this base.
 
-## What you gain
+A screen provides mobile access, live collaboration and drag-and-drop coding. This base provides read-only HTML snapshots and printable internal documents. It has no offline mobile workflow, playback editor or respondent portal. Enterprise DNA can scope a web front end, connectors, text classification and access controls for your version, with acceptance tests on your own data.
 
-- **Better answers.** A dashboard shows what the vendor decided to chart. Here you ask your own question, in your own words, and get it answered against your own data.
-- **No seats.** Everyone who needs to look can look. The bill does not grow with headcount.
-- **Your data in your Postgres.** Plain tables. Back them up, query them from anything, leave any time. There is no export step because there is nothing to leave.
-- **A process that matches you.** When your way of working changes, you add a command. You do not wait for a feature request to clear.
-
-## What you give up
-
-- **A visual board.** Stages are a table you ask about, not cards you drag.
-- **A phone app.** It runs where Claude Code runs.
-- **A vendor help desk.** This is open source. Enterprise DNA supports the installed version for businesses that want someone to call.
-
-## Who this fits
-
-Small teams who already use Claude Code, or who would rather learn to ask than learn another interface. If your team needs a screen to look at all day, keep Thematic. If you need the answers more than the screens, this is cheaper, faster and yours.
-
-Installed and run for you: https://enterprisedna.co/omni/instead-of/thematic
+Omni by Enterprise DNA installs and operates the agreed version for one setup fee, then a retainer. [Book a call](https://enterprisedna.co/omni/book/?offer=replace-software&utm_campaign=thematic&utm_medium=repo).

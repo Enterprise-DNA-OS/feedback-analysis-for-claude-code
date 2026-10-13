@@ -1,0 +1,4 @@
+"Response ID","Comment","Date","Segment","Channel","NPS","Themes","Unmapped field"
+"IMPORT-1","Late, again
+and unresolved","2026-01-02","Wholesale","Survey","","[{""base"":""delivery"",""sub"":""late"",""data"":{""sent"":-0.8,""prob"":0.9,""loc"":[0,5]}}]","original"
+"IMPORT-2","Helpful support","2026-01-03","Retail","Survey","10","[]","preserved"

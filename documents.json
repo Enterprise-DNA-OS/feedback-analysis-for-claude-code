@@ -1,11 +1,52 @@
 [
   {
-    "name": "example",
-    "title": "TODO(author): the first document this industry must produce",
-    "for_each": "select gen_random_uuid() as id, 'Example' as name",
+    "name": "feedback-brief",
+    "title": "Feedback evidence brief",
+    "for_each": "select id,name from datasets order by name",
     "file": "name",
     "sections": [
-      { "title": "Details", "sql": "select 'replace me' as item, $1::text as record_id" }
+      {
+        "title": "Dataset and purpose",
+        "sql": "select name,owner,purpose from datasets where id=$1"
+      },
+      {
+        "title": "Accepted themes",
+        "sql": "select v.* from v_theme_volume v join datasets d on d.name=v.dataset where d.id=$1",
+        "note": "Theme share uses all responses in this dataset. A response can have several themes. Counts are descriptive, not causal."
+      },
+      {
+        "title": "Open actions",
+        "sql": "select reference,title,owner,due_on from actions where dataset_id=$1 and status='open' order by due_on"
+      }
+    ]
+  },
+  {
+    "name": "action-register",
+    "title": "Feedback action register",
+    "for_each": "select id,name from datasets order by name",
+    "file": "name",
+    "sections": [
+      {
+        "title": "Commitments and evidence",
+        "sql": "select a.reference,t.name theme,a.title,a.owner,a.due_on,a.status,a.evidence,a.closed_on from actions a join themes t on t.id=a.theme_id where a.dataset_id=$1 order by a.due_on"
+      }
+    ]
+  },
+  {
+    "name": "retention-review",
+    "title": "Personal information retention review",
+    "for_each": "select id,name from datasets order by name",
+    "file": "name",
+    "sections": [
+      {
+        "title": "Recorded purpose and hold",
+        "sql": "select name,purpose,jurisdiction,personal_data,retention_review,legal_hold from datasets where id=$1",
+        "note": "Internal review worksheet. An operator decides what to retain or remove. A legal hold prevents routine disposal; this system never deletes."
+      },
+      {
+        "title": "Review coverage",
+        "sql": "select count(*) responses,count(*) filter(where privacy_reviewed) reviewed from responses where dataset_id=$1"
+      }
     ]
   }
 ]

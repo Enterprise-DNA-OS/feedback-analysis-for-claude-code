@@ -1,0 +1,42 @@
+[
+  {
+    "question": "Which themes combine negative comments with no assigned action?",
+    "command": "theme-volume"
+  },
+  {
+    "question": "Do wholesale and retail customers mention the same problems at the same rate?",
+    "command": "segment-compare"
+  },
+  {
+    "question": "How many scored responses sit behind each theme score?",
+    "command": "score-drivers"
+  },
+  {
+    "question": "Which themes gained mentions across the last two thirty-day periods?",
+    "command": "trend"
+  },
+  {
+    "question": "Which responses still have proposed labels or no accepted theme?",
+    "command": "review-queue"
+  },
+  {
+    "question": "Which feedback datasets have gone quiet while actions remain overdue?",
+    "command": "attention"
+  },
+  {
+    "question": "What action evidence is due before our next review?",
+    "command": "actions-due"
+  },
+  {
+    "question": "Which datasets need a personal-information retention review?",
+    "command": "compliance"
+  },
+  {
+    "question": "Who reviewed a theme assignment and what source words support it?",
+    "command": "response --response=R-001"
+  },
+  {
+    "question": "What are the accepted themes, review backlog and action commitments for Monday?",
+    "command": "weekly-review"
+  }
+]
